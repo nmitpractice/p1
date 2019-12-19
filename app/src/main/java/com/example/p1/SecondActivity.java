@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
-    TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +15,7 @@ public class SecondActivity extends AppCompatActivity {
 
         String msg = getIntent().getExtras().getString("username");
 
-        textView = (TextView)findViewById(R.id.textView);
+        TextView textView = (TextView)findViewById(R.id.textView);
         textView.setText("Hello, " + msg);
 
         Toast.makeText(this, "Hello, " + msg, Toast.LENGTH_SHORT).show();
